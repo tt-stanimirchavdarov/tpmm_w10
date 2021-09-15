@@ -1,0 +1,21 @@
+Because VDI (Windows 7/8/10) doesnt use RDS. Setting the RDS Home Drive Setting in GPO doesnt work.
+
+The solution for VDI is as follows:
+
+Windows 7 - Use the ProfileRedirection Script as a machine Startup Script as per normal build process.
+Create a Batch file "UserInit.bat" in C:\Windows\System32
+
+Put the following Code in the UserInit.bat file. (Amend file path and Drive letter accordingly).
+::----
+if /i not exist "\\%UserDomain%\Citrix\TSProfile\%Username%.%UserDomain%" MD "\\%UserDomain%\Citrix\TSProfile\%Username%.%UserDomain%"
+
+Net Use P: \\%UserDomain%\Citrix\TSProfile\%Username%.%UserDomain%
+::----
+
+Edit the local Registry key HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\Userinit
+
+Apend the existing command with ,C:\Windows\System32\UserInit.bat
+
+
+Windows 8/10
+Use the GPO Setting Computer Settings \ Policies \ Administrative Templates \ System \ User Profiles \ Set User Home Path

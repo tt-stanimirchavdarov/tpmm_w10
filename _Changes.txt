@@ -1,0 +1,9 @@
+SC 15/02/2019 Added support for default browser selection per user using VBS scripts
+SC 15/02/2019 Added support for custom default applications/file type associations per user using Get and SetUserFTA tool
+SC 15/02/2019 Added support for setting ClearType in the user session.
+SC 15/02/2019 Added support for FileZilla and ImageGlass including setting a default Image Viewer
+SC 15/02/2019 Added extended support for Windows Explorer preferences
+
+Added settings to enable the capture of the Outlook Cache into the INI files.
+
+Also enable Caching in the Office Group Policy Setting for no more than 3 days or you will experience excessive profile bloat and substantial reduction in logon time.

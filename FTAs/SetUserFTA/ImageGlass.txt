@@ -1,0 +1,7 @@
+.bmp, ImageGlass.AssocFile.JPG
+.dib, ImageGlass.AssocFile.JPG
+.gif, ImageGlass.AssocFile.JPG
+.jpe, ImageGlass.AssocFile.JPG
+.jpeg, ImageGlass.AssocFile.JPG
+.jpg, ImageGlass.AssocFile.JPG
+.png, ImageGlass.AssocFile.JPG

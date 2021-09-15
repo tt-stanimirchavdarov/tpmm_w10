@@ -1,0 +1,21 @@
+this is version 1.3
+===================
+
+Release Notes:
+==============
+
+version 1.3 - reduced size by using tcc, additional error handling, full unicode support, EULA added
+version 1.2 - removed Visual C runtimes dependency
+version 1.1 - fixes a bug not showing all filetypes and adds protocol support. smaller exe size due new icon.
+version 1.0 - first public version
+
+HOW TO:
+=======
+
+run GetUserFTA.exe without parameters to get a list of associated filetypes and protocols of the currect user.
+
+GetUserFTA.exe >SetUserFTA.config
+
+creates a config file that can be used with SetUserFTA
+
+visit my blog for more information: http://kolbi.cz/blog/?p=433
