@@ -1,6 +1,11 @@
 ﻿#deploy tpmm via powershell - to be run as an admin from Intune
 #Stan Chavdarov - Thintech Sep 2021
 
+#1 deployment script to download and set as logoff scheduled tasks - run as admin - this one!!
+
+#2 profile_logon from my docs. with a script to check and wait until the OPS is downloaded
+
+
 #prepare ThinTech folder on C:
 $path = "c:\Thintech"
 If(!(test-path $path))
@@ -18,8 +23,8 @@ $ctxhide_Target = "$path\ctxhide.exe"
 $plogon_Url = "https://raw.githubusercontent.com/tt-stanimirchavdarov/tpmm_w10/99dcd234cd1b88bad00fbc1e55f2445e25f0eeb3/Profile_Logon.cmd"
 $plogon_Target = "$path\Profile_Logon.cmd"
 
-$plogoff_Url = "https://raw.githubusercontent.com/tt-stanimirchavdarov/tpmm_w10/99dcd234cd1b88bad00fbc1e55f2445e25f0eeb3/Profile_Logoff.cmd"
-$plogoff_Target = "$path\Profile_Logoff.cmd"
+$plogoff_Url = "https://raw.githubusercontent.com/tt-stanimirchavdarov/tpmm_w10/99dcd234cd1b88bad00fbc1e55f2445e25f0eeb3/Profile_Logoff.ps1"
+$plogoff_Target = "$path\Profile_Logoff.ps1"
 
 $pini_Url = "https://raw.githubusercontent.com/tt-stanimirchavdarov/tpmm_w10/99dcd234cd1b88bad00fbc1e55f2445e25f0eeb3/Profile_Settings_w10.INI"
 $pini_Target = "$path\Profile_Settings_w10.INI"
